@@ -131,7 +131,8 @@ header {
 /* Hero Section */
 .hero {
     position: relative;
-    height: 100vh;
+    height: 600px;
+    /* 高さを600ピクセルに固定する */
     width: 100%;
     display: flex;
     align-items: center;
