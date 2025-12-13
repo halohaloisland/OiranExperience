@@ -310,6 +310,13 @@ header {
     }
 
     /* Mobile Hero adjustment */
+    .hero-bg {
+        top: 80px;
+        /* Offset for fixed header */
+        height: calc(100% - 80px);
+        /* Adjust height */
+    }
+
     .hero-bg img {
         object-position: top center;
     }

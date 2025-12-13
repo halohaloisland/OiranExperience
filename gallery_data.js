@@ -22,5 +22,9 @@ const galleryData = [
     {
         "src": "assets/images/gallery/gallery6.jpg",
         "alt": "Oiran Experience Gallery Image"
+    },
+    {
+        "src": "assets/images/gallery/gallery7.jpg",
+        "alt": "Oiran Experience Gallery Image"
     }
 ];
