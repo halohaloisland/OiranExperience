@@ -165,6 +165,8 @@ header {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: top;
+    /* Keep face visible */
     animation: zoom 20s infinite alternate;
 }
 
@@ -306,14 +308,23 @@ header {
     .logo .en {
         color: var(--primary-color);
     }
+
+    /* Mobile Hero adjustment */
+    .hero-bg img {
+        object-position: top center;
+    }
 }
 
 /* News Section */
 .news-container {
-    max-width: 800px;
+    max-width: 1200px;
     margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+    /* Ensure responsiveness */
+    box-sizing: border-box;
+    /* Prevent padding from causing overflow */
     background: rgba(255, 255, 255, 0.9);
-    padding: 2rem;
     border-radius: 8px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
@@ -863,6 +874,63 @@ footer {
     color: #666;
 }
 
+
 .active {
     color: var(--primary-color);
+}
+
+/* Responsive Pricing Table */
+@media screen and (max-width: 1024px) {
+    .pricing-table-container {
+        overflow-x: visible;
+        /* Disable horizontal scroll preference */
+        box-shadow: none;
+        background: transparent;
+    }
+
+    .pricing-table {
+        min-width: 100%;
+    }
+
+    .pricing-table thead {
+        display: none;
+    }
+
+    .pricing-table tbody tr {
+        display: block;
+        background: white;
+        margin-bottom: 2rem;
+        border-radius: 8px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        padding: 1.5rem;
+    }
+
+    .pricing-table td {
+        display: block;
+        text-align: center;
+        padding: 0.5rem 0;
+        border-bottom: none;
+    }
+
+    .pricing-table td ul {
+        display: inline-block;
+        text-align: left;
+    }
+
+    .plan-name {
+        background-color: var(--primary-color);
+        color: white;
+        margin: -1.5rem -1.5rem 1rem -1.5rem;
+        padding: 1rem;
+        border-radius: 8px 8px 0 0;
+    }
+
+    .plan-name .plan-subtitle {
+        color: rgba(255, 255, 255, 0.8);
+    }
+
+    .plan-price {
+        font-size: 2rem;
+        margin-top: 0.5rem;
+    }
 }
